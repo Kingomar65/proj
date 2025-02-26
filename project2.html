@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DebugYourSpend</title>
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="meteor-shower.3840x2160.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h2>DebugYourSpend</h2>
+        <h3>Budget Control: <span id="balance">₱0.00</span></h3>
+        <p class="earning">Earnings: <span id="income" class="income">₱0.00</span> | Spending: <span id="expense" class="expense">₱0.00</span></p>
+
+        <form id="transactionForm">
+           <div class="inputbox">
+            <input type="text" id="name"   required  autocomplete="off">
+            <span>Type</span>
+            <i></i>
+           </div> 
+           <div class="inputboxam">
+            <input type="number" id="amount"  required>
+            <span>Amount</span>
+            <i></i>
+           </div> 
+            <input class="daTe" type="date" id="date" required>
+            <select id="type">
+                <option value="income">Earnings</option>
+                <option value="expense">Spending</option>
+            </select>
+            <button class="deBug" type="submit">Debug</button>
+        </form>
+
+        <ul id="transactionList"></ul>
+    </div>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
